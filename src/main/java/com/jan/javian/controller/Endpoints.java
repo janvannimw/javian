@@ -20,7 +20,6 @@ public class Endpoints {
     @GetMapping("/info/contact")
     public JSONPObject getContactInfo(){
         List<Contact> contacts = contactService.findAll();
-
         return contacts == null ? new JSONPObject("contacts", new Contact()) : new JSONPObject("contact", contacts);
     }
 
